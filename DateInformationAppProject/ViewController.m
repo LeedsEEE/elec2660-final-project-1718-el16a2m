@@ -25,5 +25,39 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSString *)pickerView:(UIPickerView *)pickerView
+            titleForRow:(NSInteger)row
+            forComponent:(NSInteger)component{
+    
+    NSString *coordinate = [NSString stringWithFormat:@"%ld,%ld", component, row];
+    
+    return coordinate;
+    
+}
+
+- (void)pickerView:(UIPickerView *)pickerView
+        didSelectRow:(NSInteger)row
+       inComponent:(NSInteger)component{
+    
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    
+    return 2;
+    
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView
+numberOfRowsInComponent:(NSInteger)component{
+    
+    if (component == 0) {
+        return 31;
+    }
+    
+    else {
+        return 12;
+    }
+}
+
 
 @end
