@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF4ECA4E1FCDA93A0058A3FA /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4ECA4D1FCDA93A0058A3FA /* DataModel.m */; };
 		BF80A8D11FC48A720019A4FA /* Date.m in Sources */ = {isa = PBXBuildFile; fileRef = BF80A8D01FC48A720019A4FA /* Date.m */; };
 		BFE52D7C1FBB4C5600E0896E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE52D7B1FBB4C5600E0896E /* main.m */; };
 		BFE52D7F1FBB4C5600E0896E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE52D7E1FBB4C5600E0896E /* AppDelegate.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF4ECA4C1FCDA93A0058A3FA /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		BF4ECA4D1FCDA93A0058A3FA /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
 		BF80A8CF1FC48A720019A4FA /* Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Date.h; sourceTree = "<group>"; };
 		BF80A8D01FC48A720019A4FA /* Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Date.m; sourceTree = "<group>"; };
 		BFE52D771FBB4C5600E0896E /* DateInformationAppProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateInformationAppProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +111,8 @@
 				BFE52D7E1FBB4C5600E0896E /* AppDelegate.m */,
 				BFE52D801FBB4C5700E0896E /* ViewController.h */,
 				BFE52D811FBB4C5700E0896E /* ViewController.m */,
+				BF4ECA4C1FCDA93A0058A3FA /* DataModel.h */,
+				BF4ECA4D1FCDA93A0058A3FA /* DataModel.m */,
 				BF80A8CF1FC48A720019A4FA /* Date.h */,
 				BF80A8D01FC48A720019A4FA /* Date.m */,
 				BFE52D831FBB4C5700E0896E /* Main.storyboard */,
@@ -279,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFE52D821FBB4C5700E0896E /* ViewController.m in Sources */,
+				BF4ECA4E1FCDA93A0058A3FA /* DataModel.m in Sources */,
 				BFE52D7F1FBB4C5600E0896E /* AppDelegate.m in Sources */,
 				BFE52D7C1FBB4C5600E0896E /* main.m in Sources */,
 				BF80A8D11FC48A720019A4FA /* Date.m in Sources */,
