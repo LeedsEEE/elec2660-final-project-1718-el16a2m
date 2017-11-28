@@ -65,7 +65,13 @@ numberOfRowsInComponent:(NSInteger)component{
 
 
 - (IBAction)RunButton:(UIButton *)sender {
+    
+    
 }
+
+
 - (IBAction)ResetButton:(UIButton *)sender {
+
+
 }
 @end

@@ -161,7 +161,6 @@
                         <outlet property="ErrorMessageLabel" destination="u6L-zf-TEC" id="LUR-Md-REB"/>
                         <outlet property="EventALabel" destination="qMH-hr-NKb" id="k5b-Tj-Mdw"/>
                         <outlet property="EventBLabel" destination="kvd-fD-Mip" id="i8O-z9-sOb"/>
-                        <outlet property="ResetButton" destination="y0U-Pm-xUj" id="i0y-tx-hzd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
