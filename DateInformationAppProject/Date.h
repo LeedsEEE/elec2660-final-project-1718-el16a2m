@@ -18,5 +18,8 @@
 @property (nonatomic, strong) NSString *DeathB;
 @property (nonatomic, strong) NSString *EventA;
 @property (nonatomic, strong) NSString *EventB;
+@property (strong, nonatomic) NSString *DateName;
+@property (strong, nonatomic) NSMutableArray *Events;
+
 
 @end

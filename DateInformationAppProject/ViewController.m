@@ -19,6 +19,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.datepicker.delegate = self;
     self.datepicker.dataSource = self;
+    _dataModel = [[DataModel alloc]init];
 }
 
 
