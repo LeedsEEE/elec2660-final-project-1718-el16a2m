@@ -24,7 +24,7 @@
         
         NSError *error;
         
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Database" ofType:@".csv"];                            // define file path
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"CompletedDatabase" ofType:@".csv"];                            // define file path
         
         NSString *rawSData = [NSString stringWithContentsOfFile:filePath encoding:NSASCIIStringEncoding error:&error];      // read file
         
