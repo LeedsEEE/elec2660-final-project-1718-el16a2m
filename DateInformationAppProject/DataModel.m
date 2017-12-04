@@ -28,30 +28,30 @@
         
         
         rawSData = [rawSData stringByReplacingOccurrencesOfString:@"\"" withString:@""];
-        NSLog(@">>RAW DATA IN1: %@", rawSData);
+//        NSLog(@">>RAW DATA IN1: %@", rawSData);
         NSLog(@">>ERROR: %@", error);
         NSArray *dataLines = [rawSData componentsSeparatedByString:@"\r\n"];                                                  // separate data into lines
         
-        for(int i = 1; i < dataLines.count; i++){                                                       // go through each line
+        for(int i = 1; i < dataLines.count - 1; i++){                                                       // go through each line
             Date *dateTemp = [[Date alloc] init];                                                       // create temporary date object
             NSArray *currentData = [[dataLines objectAtIndex:i] componentsSeparatedByString:@","];      // separate lines into individual data
-            dateTemp.DateName = [currentData objectAtIndex:0];                                          // set name of the date to the first item of the row
-            for(int j = 1; j < currentData.count; j++){                                                 // put the rest of the data into an array
-                [dateTemp.Events addObject:[currentData objectAtIndex:j]];
-            }
-            dateTemp.BirthA = [currentData objectAtIndex:1];                                            //allocating Birth A
-            dateTemp.BirthB = [currentData objectAtIndex:2];                                            //allocating Birth B
-            dateTemp.BirthC = [currentData objectAtIndex:3];                                            //allocating Birth C
-            dateTemp.BirthD = [currentData objectAtIndex:4];                                            //allocating Birth D
-            dateTemp.DeathA = [currentData objectAtIndex:5];                                            //allocating Death A
-            dateTemp.DeathB = [currentData objectAtIndex:6];                                            //allocating Death B
-            dateTemp.EventA = [currentData objectAtIndex:7];                                            //allocating Event A
-            dateTemp.EventB = [currentData objectAtIndex:8];                                            //allocating Event B 
+//            for(int j = 0; j < currentData.count; j++){                                                 // put the rest of the data into an array
+//                [dateTemp.Events addObject:[currentData objectAtIndex:j]];
+//            }
+//            NSLog(@"Data row: %d %@", i, currentData);
+            dateTemp.BirthA = [currentData objectAtIndex:0];                                            //allocating Birth A
+            dateTemp.BirthB = [currentData objectAtIndex:1];                                            //allocating Birth B
+            dateTemp.BirthC = [currentData objectAtIndex:2];                                            //allocating Birth C
+            dateTemp.BirthD = [currentData objectAtIndex:3];                                            //allocating Birth D
+            dateTemp.DeathA = [currentData objectAtIndex:4];                                            //allocating Death A
+            dateTemp.DeathB = [currentData objectAtIndex:5];                                            //allocating Death B
+            dateTemp.EventA = [currentData objectAtIndex:6];                                            //allocating Event A
+            dateTemp.EventB = [currentData objectAtIndex:7];                                            //allocating Event B
             
             
             [_Dates addObject:dateTemp];                                                                // add temp to array
         }
-        NSLog(@"ProcessedData: %@", _Dates);
+//        NSLog(@"ProcessedData: %@", _Dates);
         
         
     

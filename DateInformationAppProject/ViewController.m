@@ -20,6 +20,7 @@
     self.datepicker.delegate = self;
     self.datepicker.dataSource = self;
     _dataModel = [[DataModel alloc]init];
+    
 }
 
 
@@ -32,7 +33,16 @@
             titleForRow:(NSInteger)row
             forComponent:(NSInteger)component{
     
-    NSString *coordinate = [NSString stringWithFormat:@"%ld,%ld", component, row];
+    NSLog(@"%d, %d", row, component);
+    
+  NSString *coordinate = [NSString stringWithFormat:@"%ld,%ld", component, row];
+//   NSMutableArray *tempArray = [NSMutableArray array];
+//   for(int i = 0; i < 31; i++)
+//   {
+//       [tempArray addObject:[NSString stringWithFormat:@"%d", i]];
+//  }
+    
+
     
     return coordinate;
     
@@ -61,11 +71,15 @@ numberOfRowsInComponent:(NSInteger)component{
         return 12;
     }
     
+    NSInteger 
     
-}
+    }
+    
+
 
 
 - (IBAction)RunButton:(UIButton *)sender {
+    
     
     
 }
@@ -73,6 +87,15 @@ numberOfRowsInComponent:(NSInteger)component{
 
 - (IBAction)ResetButton:(UIButton *)sender {
 
+    self.BirthALabel.text = @"";
+    self.BirthBLabel.text = @"";
+    self.BirthCLabel.text = @"";
+    self.BirthDLabel.text = @"";
+    self.DeathALabel.text = @"";
+    self.DeathBLabel.text = @"";
+    self.EventALabel.text = @"";
+    self.EventBLabel.text = @"";
+    
 
 }
 @end

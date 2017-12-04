@@ -14,6 +14,8 @@
     self = [super init];
     if (self) {
         _Events = [NSMutableArray array];
+        
+        
     }
     return self;
 }
