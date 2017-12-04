@@ -16,9 +16,7 @@
     self = [super init];
     if (self) {
         
-        //input all of data here
-        //this will take a long time
-        // you took on too much work for this app
+
         
         self.Dates = [NSMutableArray array];
         
@@ -41,7 +39,16 @@
             for(int j = 1; j < currentData.count; j++){                                                 // put the rest of the data into an array
                 [dateTemp.Events addObject:[currentData objectAtIndex:j]];
             }
-            //dateTemp.BirthA = [currentData objectAtIndex:1];
+            dateTemp.BirthA = [currentData objectAtIndex:1];                                            //allocating Birth A
+            dateTemp.BirthB = [currentData objectAtIndex:2];                                            //allocating Birth B
+            dateTemp.BirthC = [currentData objectAtIndex:3];                                            //allocating Birth C
+            dateTemp.BirthD = [currentData objectAtIndex:4];                                            //allocating Birth D
+            dateTemp.DeathA = [currentData objectAtIndex:5];                                            //allocating Death A
+            dateTemp.DeathB = [currentData objectAtIndex:6];                                            //allocating Death B
+            dateTemp.EventA = [currentData objectAtIndex:7];                                            //allocating Event A
+            dateTemp.EventB = [currentData objectAtIndex:8];                                            //allocating Event B 
+            
+            
             [_Dates addObject:dateTemp];                                                                // add temp to array
         }
         NSLog(@"ProcessedData: %@", _Dates);
