@@ -58,7 +58,9 @@
         didSelectRow:(NSInteger)row
        inComponent:(NSInteger)component{
     
-    
+    _chosenday = [self.datepicker selectedRowInComponent:0] +1;
+    _chosenmonth = [self.datepicker selectedRowInComponent:1] +1;
+
     
 }
 
@@ -72,6 +74,7 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component{
     
+    
     if (component == 0) {
         return 31;
     }
@@ -81,9 +84,10 @@ numberOfRowsInComponent:(NSInteger)component{
     }
     
     
-    
     }
-    
+
+
+
 
 
 #pragma mark Run button functionality
@@ -92,15 +96,58 @@ numberOfRowsInComponent:(NSInteger)component{
     
     //error message changes depending on picker outlet
     
-//    if () {
-//        self.ErrorMessageLabel.text = @"Please input a valid date";
-//    }
+    if (_chosenday == 31) {
+        
+        if (_chosenmonth==4) {
+            self.ErrorMessageLabel.text = @"Please input a valid date";
+        }
+        
+        else if (_chosenmonth==2){
+            self.ErrorMessageLabel.text = @"Please input a valid date";
+        }
+        
+        else if (_chosenmonth==6){
+            self.ErrorMessageLabel.text = @"Please input a valid date";
+        }
+        
+        else if (_chosenmonth==9){
+            self.ErrorMessageLabel.text = @"Please input a valid date";
+        }
+        
+        else if (_chosenmonth==11){
+            self.ErrorMessageLabel.text = @"Please input a valid date";
+        }
+        
+        else {
+            self.ErrorMessageLabel.text = @"";
+        }
+        
+        }
     
+    else if (_chosenday == 30) {
+        if (_chosenmonth==2) {
+            self.ErrorMessageLabel.text = @"Please input a valid date";
+        }
+        else {
+            self.ErrorMessageLabel.text =@"";
+        }
+    }
+    
+    else {
+        self.ErrorMessageLabel.text = @"";
+    }
+
     //date labels update depending on picker outlet
+
+
+    }
+    
+    
     
 
+
     
-}
+
 
 #pragma mark Reset button functionality
 
