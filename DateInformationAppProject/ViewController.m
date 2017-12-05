@@ -33,9 +33,12 @@
             titleForRow:(NSInteger)row
             forComponent:(NSInteger)component{
     
-    NSLog(@"%d, %d", row, component);
+//    NSLog(@"%d, %d", row, component);
     
-  NSString *coordinate = [NSString stringWithFormat:@"%ld,%ld", component, row];
+    NSInteger *rowname = row+1;
+    
+    
+  NSString *coordinate = [NSString stringWithFormat:@"%ld", rowname];
 
      NSMutableArray *tempArray = [NSMutableArray array];
    for(int i = 0; i < 31; i++)
@@ -56,6 +59,8 @@
     
     
 }
+
+#pragma mark setting up basics of picker (component and row)
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     
@@ -80,6 +85,7 @@ numberOfRowsInComponent:(NSInteger)component{
     
 
 
+#pragma mark Run button functionality
 
 - (IBAction)RunButton:(UIButton *)sender {
     
@@ -87,6 +93,7 @@ numberOfRowsInComponent:(NSInteger)component{
     
 }
 
+#pragma mark Reset button functionality
 
 - (IBAction)ResetButton:(UIButton *)sender {
 
