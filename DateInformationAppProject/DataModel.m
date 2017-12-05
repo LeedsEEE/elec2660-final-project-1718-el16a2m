@@ -40,6 +40,8 @@
 //            }
 //            NSLog(@"Data row: %d %@", i, currentData);
             
+            [_Dates addObject:dateTemp];                                                                // add temp to array
+            
             dateTemp.BirthA = [currentData objectAtIndex:0];                                            //allocating Birth A
             dateTemp.BirthB = [currentData objectAtIndex:1];                                            //allocating Birth B
             dateTemp.BirthC = [currentData objectAtIndex:2];                                            //allocating Birth C
@@ -50,8 +52,7 @@
             dateTemp.EventB = [currentData objectAtIndex:7];                                            //allocating Event B
             
             
-            [_Dates addObject:dateTemp];                                                                // add temp to array
-        }
+                   }
 //        NSLog(@"ProcessedData: %@", _Dates);
         
         

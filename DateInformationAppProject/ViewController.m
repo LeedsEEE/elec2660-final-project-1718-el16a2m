@@ -24,6 +24,7 @@
 }
 
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -40,14 +41,14 @@
     NSInteger *rowname = row+1;
     
     
-  NSString *coordinate = [NSString stringWithFormat:@"%i", rowname];
+    NSString *coordinate = [NSString stringWithFormat:@"%i", rowname];
 
-     NSMutableArray *tempArray = [NSMutableArray array];
-   for(int i = 0; i < 31; i++)
-   {
-       [tempArray addObject:[NSString stringWithFormat:@"%d", i]];
-  }
-    
+//     NSMutableArray *tempArray = [NSMutableArray array];
+//   for(int i = 0; i < 31; i++)
+//   {
+//       [tempArray addObject:[NSString stringWithFormat:@"%d", i]];
+//  }
+//    
 
     
     return coordinate;
@@ -98,25 +99,10 @@ numberOfRowsInComponent:(NSInteger)component{
     
     if (_chosenday == 31) {
         
-        if (_chosenmonth==4) {
-            self.ErrorMessageLabel.text = @"Please input a valid date";
+        if (_chosenmonth==4 || _chosenmonth==2 || _chosenmonth==6 || _chosenmonth==9 || _chosenmonth==11) {
+            self.ErrorMessageLabel.text = @"Please input a VALID date";
         }
         
-        else if (_chosenmonth==2){
-            self.ErrorMessageLabel.text = @"Please input a valid date";
-        }
-        
-        else if (_chosenmonth==6){
-            self.ErrorMessageLabel.text = @"Please input a valid date";
-        }
-        
-        else if (_chosenmonth==9){
-            self.ErrorMessageLabel.text = @"Please input a valid date";
-        }
-        
-        else if (_chosenmonth==11){
-            self.ErrorMessageLabel.text = @"Please input a valid date";
-        }
         
         else {
             self.ErrorMessageLabel.text = @"";
@@ -126,7 +112,7 @@ numberOfRowsInComponent:(NSInteger)component{
     
     else if (_chosenday == 30) {
         if (_chosenmonth==2) {
-            self.ErrorMessageLabel.text = @"Please input a valid date";
+            self.ErrorMessageLabel.text = @"Please input a VALID date";
         }
         else {
             self.ErrorMessageLabel.text =@"";
@@ -141,12 +127,8 @@ numberOfRowsInComponent:(NSInteger)component{
 
 
     }
-    
-    
-    
 
 
-    
 
 
 #pragma mark Reset button functionality
@@ -161,7 +143,7 @@ numberOfRowsInComponent:(NSInteger)component{
     self.DeathBLabel.text = @"";
     self.EventALabel.text = @"";
     self.EventBLabel.text = @"";
-    
+    self.ErrorMessageLabel.text = @"Please input a date";
 
 }
 @end
