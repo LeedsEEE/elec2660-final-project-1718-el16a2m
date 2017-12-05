@@ -40,7 +40,7 @@
 //            }
 //            NSLog(@"Data row: %d %@", i, currentData); 
             
-            [_Dates addObject:dateTemp];                                                                // add temp to array
+            [_Dates addObject:dateUsed];                                                                // add temp to array
             
             dateUsed.BirthA = [currentData objectAtIndex:0];                                            //allocating Birth A
             dateUsed.BirthB = [currentData objectAtIndex:1];                                            //allocating Birth B
