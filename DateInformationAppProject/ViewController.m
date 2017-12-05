@@ -36,7 +36,7 @@
             titleForRow:(NSInteger)row
             forComponent:(NSInteger)component{
     
-//    NSLog(@"%d, %d", row, component);
+    NSLog(@"%d, %d", _chosenday, _chosenmonth);
     
     NSInteger *rowname = row+1;
     
@@ -99,7 +99,7 @@ numberOfRowsInComponent:(NSInteger)component{
     
     if (_chosenday == 31) {
         
-        if (_chosenmonth==4 || _chosenmonth==2 || _chosenmonth==6 || _chosenmonth==9 || _chosenmonth==11) {
+        if (_chosenmonth==2 || _chosenmonth==4 || _chosenmonth==6 || _chosenmonth==9 || _chosenmonth==11) {
             self.ErrorMessageLabel.text = @"Please input a VALID date";
         }
         

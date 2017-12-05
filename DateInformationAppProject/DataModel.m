@@ -52,7 +52,8 @@
             dateTemp.EventB = [currentData objectAtIndex:7];                                            //allocating Event B
             
             
-                   }
+            
+        }
 //        NSLog(@"ProcessedData: %@", _Dates);
         
         
