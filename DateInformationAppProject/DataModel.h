@@ -12,5 +12,18 @@
 @interface DataModel : NSObject
 
 @property (strong, nonatomic) NSMutableArray *Dates;
+@property (strong, nonatomic) NSArray *numberOfDaysInMonth;
+@property NSInteger *daysinjan;
+@property NSInteger *daysinfeb;
+@property NSInteger *daysinmar;
+@property NSInteger *daysinapr;
+@property NSInteger *daysinmay;
+@property NSInteger *daysinjun;
+@property NSInteger *daysinjul;
+@property NSInteger *daysinaug;
+@property NSInteger *daysinsep;
+@property NSInteger *daysinoct;
+@property NSInteger *daysinnov;
+@property NSInteger *daysindec;
 
 @end

@@ -27,7 +27,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *EventBLabel; //making the eighth label an outlet
 @property int chosenday;
 @property int chosenmonth;
-@property int dayspassed; 
 
 @property (strong, nonatomic) DataModel *dataModel;
 
