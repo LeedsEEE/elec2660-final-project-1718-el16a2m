@@ -56,35 +56,10 @@
         }
 //        NSLog(@"ProcessedData: %@", _Dates);
     }
-    
-    _daysinjan = 31;
-    _daysinfeb = 29;
-    _daysinmar = 31;
-    _daysinapr = 30;
-    _daysinmay = 31;
-    _daysinjun = 30;
-    _daysinjul = 31;
-    _daysinaug = 31;
-    _daysinsep = 30;
-    _daysinoct = 31;
-    _daysinnov = 30;
-    _daysindec = 31;
-    
-    NSString *jandays = [NSString stringWithFormat:@"%d", _daysinjan];
-    NSString *febdays = [NSString stringWithFormat:@"%d", _daysinfeb];
-    NSString *mardays = [NSString stringWithFormat:@"%d", _daysinmar];
-    NSString *aprdays = [NSString stringWithFormat:@"%d", _daysinapr];
-    NSString *maydays = [NSString stringWithFormat:@"%d", _daysinmay];
-    NSString *jundays = [NSString stringWithFormat:@"%d", _daysinjun];
-    NSString *juldays = [NSString stringWithFormat:@"%d", _daysinjul];
-    NSString *augdays = [NSString stringWithFormat:@"%d", _daysinaug];
-    NSString *sepdays = [NSString stringWithFormat:@"%d", _daysinsep];
-    NSString *octdays = [NSString stringWithFormat:@"%d", _daysinoct];
-    NSString *novdays = [NSString stringWithFormat:@"%d", _daysinnov];
-    NSString *decdays = [NSString stringWithFormat:@"%d", _daysindec];
+
 
     
-    _numberOfDaysInMonth = [NSArray arrayWithObjects:jandays, febdays, mardays, aprdays, maydays, jundays, juldays, augdays, sepdays, octdays, novdays, decdays, nil];
+    _numberOfDaysInMonth = [NSArray arrayWithObjects:@31, @29, @31, @30, @31, @30, @31, @31, @30, @31, @30, @31, nil];
 
     
     return self; 

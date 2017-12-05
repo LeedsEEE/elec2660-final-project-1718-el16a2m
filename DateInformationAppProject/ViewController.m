@@ -59,11 +59,9 @@
         didSelectRow:(NSInteger)row
        inComponent:(NSInteger)component{
     
-    _chosenday = [self.datepicker selectedRowInComponent:0] +1;
-    _chosenmonth = [self.datepicker selectedRowInComponent:1] +1;
+    _chosenday = (int)[self.datepicker selectedRowInComponent:0];
+    _chosenmonth = (int)[self.datepicker selectedRowInComponent:1];
 
-
-    
 }
 
 
@@ -98,36 +96,36 @@ numberOfRowsInComponent:(NSInteger)component{
     
     //error message changes depending on picker outlet
     
-    if (_chosenday == 31) {
+    if ((_chosenday == 31 && (_chosenmonth==2 || _chosenmonth==4 || _chosenmonth==6 || _chosenmonth==9 || _chosenmonth==11))
+        || (_chosenday == 30 && _chosenmonth==2)) {
         
-        if (_chosenmonth==2 || _chosenmonth==4 || _chosenmonth==6 || _chosenmonth==9 || _chosenmonth==11) {
             self.ErrorMessageLabel.text = @"Please input a VALID date";
-        }
         
-        
-        else {
-            self.ErrorMessageLabel.text = @"";
-        }
-        
-        }
-    
-    else if (_chosenday == 30) {
-        if (_chosenmonth==2) {
-            self.ErrorMessageLabel.text = @"Please input a VALID date";
-        }
-        else {
-            self.ErrorMessageLabel.text =@"";
-        }
     }
-    
     else {
         self.ErrorMessageLabel.text = @"";
+        int dayIndex = 0;
+        for(int i = 0; i < _chosenmonth; i++){
+            NSInteger numDaysInChosenMonth = [[_dataModel.numberOfDaysInMonth objectAtIndex:i] intValue];
+            dayIndex += numDaysInChosenMonth;
+            NSLog(@"day index: %d", dayIndex);
+        }
+        dayIndex += _chosenday;
+        Date *chosenDate = [_dataModel.Dates objectAtIndex:dayIndex];
+        _BirthALabel.text = chosenDate.BirthA;
+        _BirthBLabel.text = chosenDate.BirthB;
+        _BirthCLabel.text = chosenDate.BirthC;
+        _BirthDLabel.text = chosenDate.BirthD;
+        _DeathALabel.text = chosenDate.DeathA;
+        _DeathBLabel.text = chosenDate.DeathB;
+        _EventALabel.text = chosenDate.EventA;
+        _EventBLabel.text = chosenDate.EventB;
     }
 
     //date labels update depending on picker outlet
 
-
-    }
+    
+}
 
 
 
