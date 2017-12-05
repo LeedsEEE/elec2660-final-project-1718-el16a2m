@@ -36,11 +36,12 @@
     NSLog(@"%d, %d", row, component);
     
   NSString *coordinate = [NSString stringWithFormat:@"%ld,%ld", component, row];
-//   NSMutableArray *tempArray = [NSMutableArray array];
-//   for(int i = 0; i < 31; i++)
-//   {
-//       [tempArray addObject:[NSString stringWithFormat:@"%d", i]];
-//  }
+
+     NSMutableArray *tempArray = [NSMutableArray array];
+   for(int i = 0; i < 31; i++)
+   {
+       [tempArray addObject:[NSString stringWithFormat:@"%d", i]];
+  }
     
 
     
@@ -51,6 +52,8 @@
 - (void)pickerView:(UIPickerView *)pickerView
         didSelectRow:(NSInteger)row
        inComponent:(NSInteger)component{
+    
+    
     
 }
 
@@ -71,7 +74,7 @@ numberOfRowsInComponent:(NSInteger)component{
         return 12;
     }
     
-    NSInteger 
+    
     
     }
     
