@@ -39,6 +39,7 @@
 //                [dateTemp.Events addObject:[currentData objectAtIndex:j]];
 //            }
 //            NSLog(@"Data row: %d %@", i, currentData);
+            
             dateTemp.BirthA = [currentData objectAtIndex:0];                                            //allocating Birth A
             dateTemp.BirthB = [currentData objectAtIndex:1];                                            //allocating Birth B
             dateTemp.BirthC = [currentData objectAtIndex:2];                                            //allocating Birth C
