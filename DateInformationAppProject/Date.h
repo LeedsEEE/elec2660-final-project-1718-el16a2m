@@ -21,8 +21,6 @@
 @property (strong, nonatomic) NSString *DateName;
 @property (strong, nonatomic) NSMutableArray *Events;
 
-//@property (strong, nonatomic) NSArray *pickerday;
-//@property (strong, nonatomic) NSArray *pickermonth;
 
 
 @end

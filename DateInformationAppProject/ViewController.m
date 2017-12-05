@@ -29,6 +29,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark setting up picker (component and row)
+
 - (NSString *)pickerView:(UIPickerView *)pickerView
             titleForRow:(NSInteger)row
             forComponent:(NSInteger)component{
@@ -38,7 +40,7 @@
     NSInteger *rowname = row+1;
     
     
-  NSString *coordinate = [NSString stringWithFormat:@"%ld", rowname];
+  NSString *coordinate = [NSString stringWithFormat:@"%i", rowname];
 
      NSMutableArray *tempArray = [NSMutableArray array];
    for(int i = 0; i < 31; i++)
@@ -60,7 +62,6 @@
     
 }
 
-#pragma mark setting up basics of picker (component and row)
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     
@@ -89,7 +90,15 @@ numberOfRowsInComponent:(NSInteger)component{
 
 - (IBAction)RunButton:(UIButton *)sender {
     
+    //error message changes depending on picker outlet
     
+//    if () {
+//        self.ErrorMessageLabel.text = @"Please input a valid date";
+//    }
+    
+    //date labels update depending on picker outlet
+    
+
     
 }
 
